@@ -1,5 +1,5 @@
 <?php
-namespace Morilog\Jalali;
+namespace Abotalebie\Jalali;
 
 use Carbon\Carbon;
 

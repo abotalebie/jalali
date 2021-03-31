@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/morilog/jalali.svg?branch=master)](https://travis-ci.org/morilog/jalali)
-morilog/jalali
+abotalebie/jalali
 ======
 - Jalali calendar is a solar calendar that was used in Persia, variants of which today are still in use in Iran as well as Afghanistan. [Read more on Wikipedia](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
 
@@ -14,13 +14,10 @@ morilog/jalali
 - Immutable
 
 ## Installation Version 3.*
-> If you are using version <= 2.*, please read [old docs](https://github.com/morilog/jalali/blob/v2.3.0/README.md)
-#### Requirements:
-- `php >= 7.0`
 
 Run the Composer update command
 
-    $ composer require morilog/jalali:3.*
+    $ composer require abotalebie/jalali:3.*
 
 <a name="basic-usage"></a>
 ## Basic Usage
@@ -30,7 +27,7 @@ In version >= 1.1,  you can use `jdate()` instead of `Jalalian::forge()`;
 #### `now([$timestamp = null])`
 ``` php
 // the default timestamp is Now
-$date = \Morilog\Jalali\Jalalian::now()
+$date = \Abotalebie\Jalali\Jalalian::now()
 // OR
 $date = jdate();
 
@@ -626,23 +623,23 @@ public function getNextMonth(): Jalalian
 #### `checkDate($year, $month, $day, [$isJalali = true])`
 ```php
 // Check jalali date
-\Morilog\Jalali\CalendarUtils::checkDate(1391, 2, 30, true); // true
+\Abotalebie\Jalali\CalendarUtils::checkDate(1391, 2, 30, true); // true
 
 // Check jalali date
-\Morilog\Jalali\CalendarUtils::checkDate(2016, 5, 7); // false
+\Abotalebie\Jalali\CalendarUtils::checkDate(2016, 5, 7); // false
 
 // Check gregorian date
-\Morilog\Jalali\CalendarUtils::checkDate(2016, 5, 7, false); // true
+\Abotalebie\Jalali\CalendarUtils::checkDate(2016, 5, 7, false); // true
 ```
 ---
 #### `toJalali($gYear, $gMonth, $gDay)`
 ```php
-\Morilog\Jalali\CalendarUtils::toJalali(2016, 5, 7); // [1395, 2, 18]
+\Abotalebie\Jalali\CalendarUtils::toJalali(2016, 5, 7); // [1395, 2, 18]
 ```
 ---
 #### `toGregorian($jYear, $jMonth, $jDay)`
 ```php
-\Morilog\Jalali\CalendarUtils::toGregorian(1395, 2, 18); // [2016, 5, 7]
+\Abotalebie\Jalali\CalendarUtils::toGregorian(1395, 2, 18); // [2016, 5, 7]
 ```
 ---
 #### `strftime($format, [$timestamp = false, $timezone = null])`
@@ -655,7 +652,7 @@ CalendarUtils::strftime('Y-m-d', strtotime('2016-05-8')); // 1395-02-19
 $Jalalian = '1394/11/25 15:00:00';
 
 // get instance of \DateTime
-$dateTime = \Morilog\Jalali\CalendarUtils::createDatetimeFromFormat('Y/m/d H:i:s', $Jalalian);
+$dateTime = \Abotalebie\Jalali\CalendarUtils::createDatetimeFromFormat('Y/m/d H:i:s', $Jalalian);
 
 ```
 ---
@@ -664,19 +661,19 @@ $dateTime = \Morilog\Jalali\CalendarUtils::createDatetimeFromFormat('Y/m/d H:i:s
 $Jalalian = '1394/11/25 15:00:00';
 
 // get instance of \Carbon\Carbon
-$carbon = \Morilog\Jalali\CalendarUtils::createCarbonFromFormat('Y/m/d H:i:s', $Jalalian);
+$carbon = \Abotalebie\Jalali\CalendarUtils::createCarbonFromFormat('Y/m/d H:i:s', $Jalalian);
 
 ```
 ---
 #### `convertNumbers($string)`
 ```php
 // convert latin to persian
-$date = \Morilog\Jalali\CalendarUtils::strftime('Y-m-d', strtotime('2016-05-8'); // 1395-02-19
-\Morilog\Jalali\CalendarUtils::convertNumbers($date); // ۱۳۹۵-۰۲-۱۹
+$date = \Abotalebie\Jalali\CalendarUtils::strftime('Y-m-d', strtotime('2016-05-8'); // 1395-02-19
+\Abotalebie\Jalali\CalendarUtils::convertNumbers($date); // ۱۳۹۵-۰۲-۱۹
 
 // convert persian to latin
-$dateString = \Morilog\Jalali\CalendarUtils::convertNumbers('۱۳۹۵-۰۲-۱۹', true); // 1395-02-19
-\Morilog\Jalali\CalendarUtils::createCarbonFromFormat('Y-m-d', $dateString)->format('Y-m-d'); //2016-05-8
+$dateString = \Abotalebie\Jalali\CalendarUtils::convertNumbers('۱۳۹۵-۰۲-۱۹', true); // 1395-02-19
+\Abotalebie\Jalali\CalendarUtils::createCarbonFromFormat('Y-m-d', $dateString)->format('Y-m-d'); //2016-05-8
 ```
 
 ---

@@ -4,10 +4,10 @@ if (! function_exists('jdate')) {
 
     /**
      * @param string $str
-     * @return \Morilog\Jalali\Jalalian
+     * @return \Abotalebie\Jalali\Jalalian
      */
     function jdate($str = null)
     {
-        return \Morilog\Jalali\Jalalian::forge($str);
+        return \Abotalebie\Jalali\Jalalian::forge($str);
     }
 }
