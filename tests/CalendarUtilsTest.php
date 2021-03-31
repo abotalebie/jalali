@@ -1,11 +1,11 @@
 <?php
 
-namespace Morilog\Jalali\Tests;
+namespace Abotalebie\Jalali\Tests;
 
 use DateTime;
 use DateTimeZone;
-use Morilog\Jalali\CalendarUtils;
-use Morilog\Jalali\Jalalian;
+use Abotalebie\Jalali\CalendarUtils;
+use Abotalebie\Jalali\Jalalian;
 use PHPUnit\Framework\TestCase;
 
 class CalendarUtilsTest extends TestCase

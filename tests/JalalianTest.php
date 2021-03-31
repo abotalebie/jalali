@@ -1,9 +1,9 @@
 <?php
 
-namespace Morilog\Jalali\Tests;
+namespace Abotalebie\Jalali\Tests;
 
 use Carbon\Carbon;
-use Morilog\Jalali\Jalalian;
+use Abotalebie\Jalali\Jalalian;
 use PHPUnit\Framework\TestCase;
 
 final class JalalianTest extends TestCase

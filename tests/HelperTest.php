@@ -1,8 +1,8 @@
 <?php
 
-namespace Morilog\Jalali\Tests;
+namespace Abotalebie\Jalali\Tests;
 
-use Morilog\Jalali\Jalalian;
+use Abotalebie\Jalali\Jalalian;
 use PHPUnit\Framework\TestCase;
 
 class HelperTest extends TestCase
